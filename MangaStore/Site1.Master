@@ -1,0 +1,122 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="MangaStore.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <%--bootstrap css--%>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <%--datatables css--%>
+    <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <%--font css--%>
+    <link href="font/css/all.css" rel="stylesheet" />
+    <%--custom css--%>
+    <link href="css/customcss.css" rel="stylesheet" />
+    <%--bootstrap js--%>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="bootstrap/js/popper.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <%--NAVBAR--%>
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="#">
+                    <img src="img/ghost.png" width="30" height="30"/>
+                    Manga_ForU
+                </a>    
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                      <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">About us</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Term</a>
+                      </li>
+                    </ul>
+
+                     <ul class="navbar-nav ">
+                      <li class="nav-item active">
+                        <a class="nav-link" href="#">View</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Login</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Signup</a>
+                      </li>
+                      <li class="nav-item active">
+                        <a class="nav-link" href="#">logout</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Hello</a>
+                      </li>
+                    </ul>
+                </div>
+            </nav> 
+        </div>
+
+       <%-- MAIN CONTENT PAGE--%>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+       <%--FOOTER--%>
+       <footer>
+           <div id="footer1" class="container-fluid">
+               <div class="row">
+                   <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                       <p style="padding: 10px">
+                           <asp:LinkButton class="footerlink" ID="LinkButton1" runat="server" style="padding: 10px">
+                               Admin login 
+                           </asp:LinkButton>
+                           <span style="color:white;">|</span>
+                           <asp:LinkButton class="footerlink" ID="LinkButton2" runat="server" style="padding: 10px">
+                               Author manager 
+                           </asp:LinkButton>
+                           <span style="color:white;">|</span>
+                            <asp:LinkButton class="footerlink" ID="LinkButton3" runat="server" style="padding: 10px">
+                               Publisher manager 
+                           </asp:LinkButton>
+                           <span style="color:white;">|</span>
+                           <asp:LinkButton class="footerlink" ID="LinkButton4" runat="server" style="padding: 10px">
+                               Book inventory 
+                           </asp:LinkButton>
+                           <span style="color:white;">|</span>
+                           <asp:LinkButton class="footerlink" ID="LinkButton5" runat="server" style="padding: 10px">
+                               Book issuing 
+                           </asp:LinkButton>
+                           <span style="color:white;">|</span>
+                           <asp:LinkButton class="footerlink" ID="LinkButton6" runat="server" style="padding: 10px">
+                               Member manager 
+                           </asp:LinkButton>
+                       </p>
+                   </div>
+               </div>
+           </div>
+           <div id="footer2" class="container-fluid">
+               <div class="row">
+                   <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                       <p style="color:whitesmoke; padding: 10px">
+                           <a class="footerlink" href="#" target="_blank">github repository</a>
+                       </p>
+                   </div>
+               </div>
+           </div>
+       </footer> 
+    </form>
+</body>
+</html>
