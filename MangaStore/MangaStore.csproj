@@ -2126,11 +2126,46 @@
     <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="bootstrap\js\jquery-3.3.1.slim.min.js" />
     <Content Include="bootstrap\js\popper.min.js" />
+    <Content Include="img\admin.png" />
+    <Content Include="img\cyber.jpg" />
+    <Content Include="img\cyber2.jpg" />
+    <Content Include="img\gabchan.png" />
     <Content Include="img\ghost.png" />
+    <Content Include="img\banner1.gif" />
+    <Content Include="img\cat.gif" />
+    <Content Include="img\lucy.jpg" />
+    <Content Include="img\online-library.png" />
+    <Content Include="img\user.png" />
+    <Content Include="img\rating.png" />
+    <Content Include="img\seo.png" />
+    <Content Include="page\adminlogin.aspx" />
+    <Content Include="page\HomePage.aspx" />
+    <Content Include="page\userlogin.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="page\adminlogin.aspx.cs">
+      <DependentUpon>adminlogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\adminlogin.aspx.designer.cs">
+      <DependentUpon>adminlogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\HomePage.aspx.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\HomePage.aspx.designer.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\userlogin.aspx.cs">
+      <DependentUpon>userlogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\userlogin.aspx.designer.cs">
+      <DependentUpon>userlogin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
