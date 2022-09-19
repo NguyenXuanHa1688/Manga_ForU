@@ -44,6 +44,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -2129,6 +2130,7 @@
     <Content Include="img\admin.png" />
     <Content Include="img\cyber.jpg" />
     <Content Include="img\cyber2.jpg" />
+    <Content Include="img\enrollment.png" />
     <Content Include="img\gabchan.png" />
     <Content Include="img\ghost.png" />
     <Content Include="img\banner1.gif" />
@@ -2141,6 +2143,7 @@
     <Content Include="page\adminlogin.aspx" />
     <Content Include="page\HomePage.aspx" />
     <Content Include="page\userlogin.aspx" />
+    <Content Include="page\usersignup.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
@@ -2165,6 +2168,13 @@
     </Compile>
     <Compile Include="page\userlogin.aspx.designer.cs">
       <DependentUpon>userlogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\usersignup.aspx.cs">
+      <DependentUpon>usersignup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\usersignup.aspx.designer.cs">
+      <DependentUpon>usersignup.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site1.Master.cs">
