@@ -1,12 +1,12 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="usersignup.aspx.cs" Inherits="MangaStore.page.usersignup" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="userprofile.aspx.cs" Inherits="MangaStore.page.userprofile" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-<div class="container" style="margin-top: 30px; margin-bottom: 30px">
+    <div class="container-fluid" style="margin-top: 30px; margin-bottom: 30px">
         <div class="row">
-            <div class="col-md-9 mx-auto">
-                <div class="card" style="border-color: cadetblue; border-width: 5px; width: 800px">
+            <div class="col-md-5">
+                <div class="card" style="border-color: cadetblue; border-width: 5px">
                     <div class="card-body">
                         <div class="row">
                             <div class="col">
@@ -19,7 +19,8 @@
                         <div class="row">
                             <div class="col">
                                 <center>
-                                    <h3>User register</h3>
+                                    <h3>Your profile</h3>
+                                    <span>Account status - </span><asp:Label class="badge badge-pill badge-success" ID="Label1" runat="server" Text="Label1"></asp:Label>
                                 </center>
                             </div>
                         </div>
@@ -562,11 +563,48 @@
                         </div>
 
                             <div class="form-group">
-                                <asp:Button ID="Button2" runat="server" Text="Sign up" class="btn btn-outline-info btn-block" />
+                                <asp:Button ID="Button2" runat="server" Text="Save" class="btn btn-outline-warning btn-block" />
                             </div>
                        
                     </div>
                 </div>
+            </div>
+
+            <div class="col-md-7">
+                <div class="card" style="border-color: cadetblue; border-width: 5px">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <center>
+                                    <img src="../img/manga.png" width="150px" />
+                                </center>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <center>
+                                    <h3>Your issue manga</h3>
+                                    <asp:Label class="badge badge-pill badge-info" ID="Label2" runat="server" Text="Your manga list"></asp:Label>
+                                </center>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <hr />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <asp:GridView ID="GridView1" runat="server" class="table table-striped table-bordered">
+
+                                </asp:GridView>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
             </div>
         </div>
     </div>
