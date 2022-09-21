@@ -2159,10 +2159,14 @@
     <Content Include="page\userlogin.aspx" />
     <Content Include="page\userprofile.aspx" />
     <Content Include="page\usersignup.aspx" />
+    <Content Include="Scripts\sweetalert-dev.js" />
+    <Content Include="Scripts\sweetalert.min.js" />
+    <Content Include="Styles\sweetalert.css" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Member.cs" />
     <Compile Include="page\adminauthormanagement.aspx.cs">
       <DependentUpon>adminauthormanagement.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

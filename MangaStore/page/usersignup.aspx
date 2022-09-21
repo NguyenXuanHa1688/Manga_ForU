@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-<div class="container" style="margin-top: 30px; margin-bottom: 30px">
+    <div class="container" style="margin-top: 30px; margin-bottom: 30px">
         <div class="row">
             <div class="col-md-9 mx-auto">
                 <div class="card" style="border-color: cadetblue; border-width: 5px; width: 800px">
@@ -562,7 +562,7 @@
                         </div>
 
                             <div class="form-group">
-                                <asp:Button ID="Button2" runat="server" Text="Sign up" class="btn btn-outline-info btn-block" />
+                                <asp:Button ID="Button2" runat="server" Text="Sign up" class="btn btn-outline-info btn-block" OnClick="Button2_Click" />
                             </div>
                        
                     </div>

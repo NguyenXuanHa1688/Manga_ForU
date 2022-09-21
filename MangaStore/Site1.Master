@@ -17,6 +17,12 @@
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="bootstrap/js/jquery-3.3.1.slim.min.js"></script>
     <script src="bootstrap/js/popper.min.js"></script>
+    <%--Sweetalert js--%>
+    <script src="Scripts/sweetalert.min.js"></script>
+    <%--Sweetalert css--%>
+    <link href="Styles/sweetalert.css" rel="stylesheet" />
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -52,16 +58,19 @@
                         <a class="nav-link" href="#" style="color: white">View</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="userlogin.aspx" style="color: white">Login</a>
+<%--                        <a class="nav-link" href="userlogin.aspx" style="color: white">Login</a>--%>
+                          <asp:LinkButton ID="LinkButton10" runat="server" OnClick="LinkButton10_Click" class="nav-link" ForeColor="White">login</asp:LinkButton>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="usersignup.aspx" style="color: white">Signup</a>
+<%--                        <a class="nav-link" href="usersignup.aspx" style="color: white">Signup</a>--%>
+                          <asp:LinkButton ID="LinkButton9" runat="server" OnClick="LinkButton9_Click" class="nav-link" ForeColor="White">Sign up</asp:LinkButton>
                       </li>
                       <li class="nav-item active">
-                        <a class="nav-link" href="#" style="color: white">logout</a>
+                        <asp:LinkButton ID="LinkButton8" runat="server" OnClick="LinkButton8_Click" class="nav-link" ForeColor="White">logout</asp:LinkButton>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="userprofile.aspx" style="color: white">Hello</a>
+                        <%--<a class="nav-link" href="userprofile.aspx" style="color: white">Hello</a>--%>
+                        <asp:LinkButton ID="LinkButton7" runat="server" OnClick="LinkButton7_Click" class="nav-link" ForeColor="White">Hello</asp:LinkButton>
                       </li>
                     </ul>
                 </div>
