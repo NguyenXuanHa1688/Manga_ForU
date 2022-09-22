@@ -47,7 +47,7 @@ namespace MangaStore.page
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
-                if(dt.Rows.Count > 1)
+                if(dt.Rows.Count >= 1)
                 {
                     return true;
                 }

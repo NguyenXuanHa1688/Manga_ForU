@@ -49,6 +49,8 @@ namespace MangaStore.page
                     }
                     Response.Redirect("HomePage.aspx");
                 }
+                ClientScript.RegisterClientScriptBlock(this.GetType(), "alert",
+                "swal('Error!', 'Wrong password or username', 'error')", true);
             }
             catch (Exception ex)
             {

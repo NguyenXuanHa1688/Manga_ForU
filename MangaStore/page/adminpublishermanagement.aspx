@@ -1,5 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="adminpublishermanagement.aspx.cs" Inherits="MangaStore.page.adminpublishermanagement" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#<%=GridView1.ClientID%>").prepend($("<thead></thead>").append($(this).find("tr:first"))).DataTable();
+        });
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -37,7 +42,7 @@
                                     <asp:TextBox CssClass="form-control" ID="Textbox1" runat="server" placeholder="ID"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <asp:Button ID="Button1" runat="server" Text="Search" class="btn btn-outline-info btn-lg" />
+                                    <asp:Button ID="Button1" runat="server" Text="Search" class="btn btn-outline-info btn-lg" OnClick="Button1_Click" />
                                 </div>
                             </div>
 
@@ -57,13 +62,13 @@
 
                         <div class="row">
                             <div class="col-4">
-                                <asp:Button ID="Button2" runat="server" Text="Update" class="btn btn-outline-success btn-block btn-lg" />
+                                <asp:Button ID="Button2" runat="server" Text="Update" class="btn btn-outline-success btn-block btn-lg" OnClick="Button2_Click" />
                             </div>
                             <div class="col-4">
-                                <asp:Button ID="Button3" runat="server" Text="Add" class="btn btn-outline-warning btn-block btn-lg" />
+                                <asp:Button ID="Button3" runat="server" Text="Add" class="btn btn-outline-warning btn-block btn-lg" OnClick="Button3_Click" />
                             </div>
                             <div class="col-4">
-                                <asp:Button ID="Button4" runat="server" Text="Delete" class="btn btn-outline-danger btn-block btn-lg" />
+                                <asp:Button ID="Button4" runat="server" Text="Delete" class="btn btn-outline-danger btn-block btn-lg" OnClick="Button4_Click" />
                             </div>
                         </div>                    
                     </div>
@@ -89,8 +94,13 @@
                         </div>
 
                         <div class="row">
+                            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:MangaDBConnectionString %>" SelectCommand="SELECT * FROM [Publisher]"></asp:SqlDataSource>
                             <div class="col">
-                                <asp:GridView ID="GridView1" runat="server" class="table table-striped table-bordered">
+                                <asp:GridView ID="GridView1" runat="server" class="table table-striped table-bordered" AutoGenerateColumns="False" DataKeyNames="PublisherID" DataSourceID="SqlDataSource1">
+                                    <Columns>
+                                        <asp:BoundField DataField="PublisherID" HeaderText="PublisherID" ReadOnly="True" SortExpression="PublisherID" />
+                                        <asp:BoundField DataField="PublisherName" HeaderText="PublisherName" SortExpression="PublisherName" />
+                                    </Columns>
 
                                 </asp:GridView>
                             </div>
